@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+  <title>Slide Navbar</title>
+  <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  <style>
+    #myVideo {
+      position: relative;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      font-family: 'Jost', sans-serif;
+      text-align: left;
+     margin-top: 150px;
+    }
+    h6{
+   margin-top: 20px;
+    }
+    button{
+      top: -50px;
+    margin-top: 20px;
+      color: rgb(255, 255, 255);
+      background-color: black;
+     
+    }
+   
+   
+  </style>
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="wrapper">
+      <div class="logo"><a href="#">Green Guards</a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="http://127.0.0.1:8000/pages/home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#" class="desktop-item">features</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+        
+        </li>
+        <li>
+          <a href="http://127.0.0.1:8000/pages/contact" class="desktop-item">contact</a>
+        <li><a href="#">Feedback</a></li>
+
+
+
+
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+
+
+    </div>
+    <div class="container">
+      <div>
+        {% if user.is_authenticated %}
+        <button class="log"><a href="http://127.0.0.1:8000/pages/home">logout</a></button>
+        {%else%}
+        <button class="log"><a href="http://127.0.0.1:8000/pages/login">Login</a></button>
+        <button class="reg"><a href=http://127.0.0.1:8000/pages/signnup>Sign up</a></button>
+        {%endif%}
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+  <video autoplay muted loop id="myVideo">
+    <source src="Fossil Fuels.mp4" type="video/mp4">
+  </video>
+  <div class="video-text">
+   <h1> We are working togother to make green environment</h1>
+  <h6>Ending plastic waste is ambitious. But it is through collaboration and collective action that this complex problem can be solved.</h6>
+ <button>Submitting a report + </button>
+  </div>
+
+</body>
+
+</html>

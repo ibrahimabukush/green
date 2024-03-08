@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up  </title> 
+    {% load static %}
+ <link rel="stylesheet" href="{% static 'signup.css' %}">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>Sign up</h2>
+    <form  method="post">
+        {% csrf_token %}
+        <div class="input-box">
+        <input type="text"  name ="name" placeholder="Enter your name" required>
+      </div>
+      <div class="input-box">
+        <input type="text" name ="username"placeholder="Enter your username" required>
+      </div>
+      <div class="input-box">
+        <input type="email" id="email" name="email" placeholder="Enter your email"  required><br>
+      </div>
+      <div class="input-box">
+        <input type="password" name ="password" placeholder="Create password" required>
+      </div>
+      <div class="policy">
+        <input type="checkbox">
+        <h3>I accept all terms & condition</h3>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Sign up">
+      </div>
+      <div class="text">
+        <h3>Already have an account? <a href="http://127.0.0.1:8000/pages/login">Login now</a></h3>
+      </div>
+      <div>
+        
+      </div>
+      
+    </form>
+  </div>
+
+</body>
+</html>
+

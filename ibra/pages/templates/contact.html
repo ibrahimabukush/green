@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Green Guards {{Name}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .rg {
+            display: inline-block; /* Ensures that the link behaves like a block element */
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CONTACT US</h1>
+        <form  method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name1" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email1" required><br>
+            <label for="Report">Report:</label><br>
+            <textarea id="report" name="report1"  required></textarea><br>
+            <div class="input-box button">
+                <input type="Submit" value="submit" class="rg">
+              </div>
+        </form>
+    </div>
+</body>
+</html>
